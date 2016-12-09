@@ -1,9 +1,21 @@
 <?php 
+/**
+ * este es el controlador de categorias
+ *
+ * desde aqui podemos controlar las acciones de nuestra app en el menu categorias 
+ */
 class categoriesController extends AppController {
-
+/**
+ * controladro categorias
+ * @return type
+ */
 	public function __construct(){
 		parent::__construct();
 	}
+	/**
+	 * constructor
+	 * @return type
+	 */
 
 	public function index(){
 		//opcion 1

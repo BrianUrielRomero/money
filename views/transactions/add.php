@@ -1,6 +1,6 @@
 <h2>Agregar Transaccion</h2>
 
-<form action="<?php echo APP_URL."/transations/add"; ?>"
+<form action="<?php echo APP_URL."/transactions/add"; ?>"
 	method="POST">
 	
 	<p>

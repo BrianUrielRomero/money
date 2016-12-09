@@ -50,6 +50,11 @@ class accountsController extends AppController {
 			$this->redirect(array("controller"=>"users"));
 			}
 		}
+		/**
+		 * metodo para crear una cuenta
+		 * @param type $id 
+		 * @return type
+		 */
 
 	public function edit($id){
 		if ($_POST) {
@@ -75,6 +80,11 @@ class accountsController extends AppController {
 		$this->set("accounts", $this->accounts->find("accounts"));
 		
 	}
+	/**
+	 * metodo para editar cuentas
+	 * @param type $id 
+	 * @return type
+	 */
 
 	public function delete($id){
 		$options = "accounts.id=".$id;
@@ -83,4 +93,5 @@ class accountsController extends AppController {
 		}
 
 	}
+	/***/
 }

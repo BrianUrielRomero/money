@@ -1,14 +1,26 @@
 <?php 
+/**
+ * clase transacciones 
+ * este controlador contiene los metodos de transacciones
+ * 
+ */
 class transactionsController extends AppController {
-
+	/**
+	 * controlador transacciones
+	 * 
+	 * @return class
+	 */
 	public function __construct(){
 		parent::__construct();
 	}
-
+	/**
+	 * constructor de contructores
+	 * @return type
+	 */
 	public function index(){
 		//opcion 1
 		$options= array(
-			
+			"conditions"=>"transactions.category_id=categories.id and transactions.account_id=accounts.id"
 			);
 
 		$this->set("transactions", 
@@ -18,7 +30,10 @@ class transactionsController extends AppController {
 				$options
 				)
 			);
-	}
+	}/**
+	 * Index de trasacciones y la condicion para que aparesca uno solo
+	 * @return type
+	 */
 
 
 	public function add(){
@@ -39,6 +54,11 @@ class transactionsController extends AppController {
 			$this->redirect(array("controller"=>"users"));
 			}
 		}
+		/**
+		 * Metodo que se utiliza para agregar una transanccion 
+		 * @param type $id 
+		 * @return type
+		 */
 
 	public function edit($id){
 		if ($_POST) {
